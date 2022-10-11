@@ -1,0 +1,144 @@
+/* ==========Google fonts========== */
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+
+:root{
+    /* ========Colors====== */
+    --body-color:#000;
+    --input-color:#bdc3c7;
+    --border-color:#dcdde1;
+    --light-color:#fff;
+    --btn-bg-hover-color:#e21e22;
+
+    /* =========Typography======= */
+    --body-font:'Josefin Sans', sans-serif;
+    --normal-font-size:1.2rem;
+    --small-font-size:1rem;
+
+}
+
+/* ========Base========== */
+
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+.body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+    color: var(--body-color);
+    font-size: var(--normal-font-size);
+    font-weight: normal;
+}
+
+/* ==========login form================ */
+
+.login-main{
+    width: 100%;
+    min-height: 100vh;
+    background: url("../images/background.jpg") no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.login-form{
+    max-width: 520px;
+    margin:0 auto;
+    background: var(--light-color);
+    padding: 60px 30px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(173, 59, 127, 0.949);
+}
+
+.login-form::after{
+    content: '';
+    width: 200px;
+    height: 50px;
+    background: url("../images/after.png") no-repeat right top/cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.login-form::before{
+    content: '';
+    width: 200px;
+    height: 50px;
+    background: url("../images/before.png") no-repeat left bottom/cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.login-form .logo img{
+    height: 130px;
+    margin-bottom: 10px;
+}
+
+.login-form h3{
+    margin-left: 30px;
+}
+
+.form-group{
+    height: 60px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group .form-control{
+    height: 100%;
+    outline: 0;
+    border-color: var(--border-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: none;
+    /* padding: 1rem; */
+    font-size: var(--normal-font-size);
+}
+
+.form-group .form-control:focus{
+    box-shadow: none;
+    border-color: var(--body-color);
+}
+
+.form-group .form-label{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    transition: 0.3s;
+    color: var(--input-color);
+    background-color: var(--light-color);
+    /* padding: 0.5rem; */
+}
+
+.form-control:focus+.form-label,
+.form-control:not(:placeholder-shown).form-control:not(:focus)+.form-label{
+    top: -0.6rem;
+    left: 0.8rem;
+    z-index: 10;
+    font-size: var(--small-font-size);
+    color: var(--body-color);
+}
+
+
+.x:hover{
+    background: var(--btn-bg-hover-color);
+
+    
+}
+.x{
+    background: var(--body-color);
+    color: var(--light-color);
+    padding: 10px;
+    margin: 0;
+    /* padding: 0; */
+  
+}
+
